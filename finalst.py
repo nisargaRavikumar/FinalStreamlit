@@ -140,5 +140,5 @@ if add_selectbox == 'Book Recommendations':
     bookrecomm()   
 elif add_selectbox == 'Inventory Forecasting':
     salesforecast()   
-elif add_selectbox == 'Cohort Analysis':
-    cohort()
+#elif add_selectbox == 'Cohort Analysis':
+ #   cohort()
