@@ -11,6 +11,7 @@ import numpy as np
 import streamlit as st
 import glob
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import seaborn as sns
 from matplotlib import pyplot as plt
 import joblib
