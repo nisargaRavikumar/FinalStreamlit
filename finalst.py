@@ -11,7 +11,6 @@ import numpy as np
 import streamlit as st
 import glob
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import seaborn as sns
 from matplotlib import pyplot as plt
 import joblib
@@ -41,8 +40,6 @@ add_selectbox = st.sidebar.radio(
     "Select the option",
     ("Book Recommendations", "Inventory Forecasting","Cohort Analysis")
 )
-
-@st.cache
  
 def bookrecomm():
     st.title("Books Recommendations for User")
