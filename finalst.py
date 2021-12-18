@@ -38,8 +38,9 @@ st.markdown(
 )
 add_selectbox = st.sidebar.radio(
     "Select the option",
-    ("Book Recommendations", "Inventory Forecasting","Cohort Analysis")
+    ("Book Recommendations", "Inventory Forecasting")
 )
+
  
 def bookrecomm():
     st.title("Books Recommendations for User")
@@ -95,40 +96,6 @@ def salesforecast():
         )
         st.write(fig)
 
-# def cohort():
-#     st.title("Cohort Analysis for user retention")
-#     st.write("-------------------------------------------------------------------------------------------------")
-    
-#     cohort_pivot = joblib.load('cohort.sav')
-#     cohort_size = cohort_pivot.iloc[:,0]
-#     retention_matrix = cohort_pivot.divide(cohort_size, axis = 0)
-#     cohort_size_df = pd.DataFrame(cohort_size).rename(columns={0: 'cohort_size'})
-#     with sns.axes_style("white"):
-#         fig, ax = plt.subplots(1, 2, figsize=(12, 8), sharey=True, gridspec_kw={'width_ratios': [1, 11]})
-    
-#         # retention matrix
-#         sns.heatmap(retention_matrix, 
-#                     mask=retention_matrix.isnull(), 
-#                     annot=True, 
-#                     fmt='.0%', 
-#                     cmap='RdYlGn', 
-#                     ax=ax[1])
-#         ax[1].set_title('Monthly Cohorts: User Retention', fontsize=16)
-#         ax[1].set(xlabel='# of periods',
-#               ylabel='')
-
-#         #   cohort size
-#         cohort_size_df = pd.DataFrame(cohort_size).rename(columns={0: 'cohort_size'})
-#         white_cmap = mcolors.ListedColormap(['white'])
-#         sns.heatmap(cohort_size_df, 
-#                     annot=True, 
-#                     cbar=False, 
-#                     fmt='g', 
-#                     cmap=white_cmap, 
-#                     ax=ax[0])
-
-#         fig.tight_layout()
-#     st.write(fig)
 
 
     
@@ -137,5 +104,4 @@ if add_selectbox == 'Book Recommendations':
     bookrecomm()   
 elif add_selectbox == 'Inventory Forecasting':
     salesforecast()   
-#elif add_selectbox == 'Cohort Analysis':
- #   cohort()
+
