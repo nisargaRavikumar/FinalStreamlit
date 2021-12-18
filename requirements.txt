@@ -10,3 +10,5 @@ sklearn-json==0.1.0
 streamlit==1.2.0
 plotly==5.4.0
 tensorflow==2.7.0
+numpy==1.20.1
+pandas==1.2.4
