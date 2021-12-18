@@ -45,6 +45,8 @@ add_selectbox = st.sidebar.radio(
     "Select the option",
     ("Book Recommendations", "Inventory Forecasting","Cohort Analysis")
 )
+
+@st.cache
  
 def bookrecomm():
     st.title("Books Recommendations for User")
